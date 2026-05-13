@@ -7,7 +7,18 @@ export type Property = {
   description: string
   ksf: string[]
   motion?: 'flow' | 'shuffle' | 'jitter' | 'window'
-  scene?: 'stream-wall' | 'flow' | 'finite' | 'irreversible' | 'heterogeneous'
+  scene?:
+    | 'stream-wall'
+    | 'flow'
+    | 'finite'
+    | 'irreversible'
+    | 'heterogeneous'
+    | 'noncommutative'
+    | 'nonadditive'
+    | 'nonsubstitutable'
+    | 'future'
+    | 'uncertainty'
+    | 'window'
   pictogram: string[]
 }
 
@@ -161,6 +172,7 @@ export const chapters: Chapter[] = [
           '同じ要素、同じ総量でも、並び順が違えば、進みやすさも、生まれる価値も、成立そのものも変わる。',
         ksf: ['行動の順序を予め決める', '決めた順序をむやみに崩さない'],
         motion: 'shuffle',
+        scene: 'noncommutative',
         pictogram: [
           '█.............',
           '██............',
@@ -181,6 +193,7 @@ export const chapters: Chapter[] = [
         description:
           '同じ総量の時間でも、ひとまとまりで使うか、短く積み重ねるかで、得られるものが異なる。どちらが優れているとは、一概に言えない。',
         ksf: ['まとめと分割のどちらが適切か見抜く', '時間の連続性に応じて行動を決める'],
+        scene: 'nonadditive',
         pictogram: [
           '..............',
           '.██████.......',
@@ -210,6 +223,7 @@ export const chapters: Chapter[] = [
         description:
           '自分の時間でしか得られないものがある。特定の人といる時間でしか得られないものもある。身体、認知、経験、関係、責任は、譲渡できない。',
         ksf: ['自分で経験するべきことを明確にする', '他人に任せられることを明確にする'],
+        scene: 'nonsubstitutable',
         pictogram: [
           '█.█.█.█.█.█.█.',
           '.█.█.█.█.█.█.█',
@@ -251,6 +265,7 @@ export const chapters: Chapter[] = [
           '体調不良、割り込み、移動の遅延、家族対応。幅、質、連続性、タイミング。あらゆる側面が、計画からずれていく。',
         ksf: ['別案を設けておく', '何が予定を崩すかを把握する'],
         motion: 'jitter',
+        scene: 'uncertainty',
         pictogram: [
           '.█..█..█....█.',
           '...█....█..█..',
@@ -272,6 +287,7 @@ export const chapters: Chapter[] = [
           '特定の区間内でしか成立しない行動や価値がある。「これ以降」「これ以前」「その間だけ」。朝の身支度も、締め切りも、子供といられる時間も、すべて区間に縛られている。',
         ksf: ['どの区間でのみ成立するかを明確にする', '成立する区間内で実行する'],
         motion: 'window',
+        scene: 'window',
         pictogram: [
           '..............',
           '..............',

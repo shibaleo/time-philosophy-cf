@@ -9,6 +9,12 @@ import { Flow } from '../components/Flow'
 import { Finite } from '../components/Finite'
 import { Irreversible } from '../components/Irreversible'
 import { Heterogeneous } from '../components/Heterogeneous'
+import { Noncommutative } from '../components/Noncommutative'
+import { Nonadditive } from '../components/Nonadditive'
+import { Nonsubstitutable } from '../components/Nonsubstitutable'
+import { Future } from '../components/Future'
+import { Uncertainty } from '../components/Uncertainty'
+import { WindowConstraint } from '../components/WindowConstraint'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -273,6 +279,18 @@ function PropertyCard({
             <Irreversible className="w-[260px] md:w-[460px] h-auto" />
           ) : p.scene === 'heterogeneous' ? (
             <Heterogeneous className="w-[260px] md:w-[460px] h-auto" />
+          ) : p.scene === 'noncommutative' ? (
+            <Noncommutative className="w-[260px] md:w-[460px] h-auto" />
+          ) : p.scene === 'nonadditive' ? (
+            <Nonadditive className="w-[260px] md:w-[460px] h-auto" />
+          ) : p.scene === 'nonsubstitutable' ? (
+            <Nonsubstitutable className="w-[260px] md:w-[460px] h-auto" />
+          ) : p.scene === 'future' ? (
+            <Future className="w-[260px] md:w-[460px] h-auto" />
+          ) : p.scene === 'uncertainty' ? (
+            <Uncertainty className="w-[260px] md:w-[460px] h-auto" />
+          ) : p.scene === 'window' ? (
+            <WindowConstraint className="w-[260px] md:w-[460px] h-auto" />
           ) : (
             <Pictogram
               pattern={p.pictogram}
