@@ -18,7 +18,6 @@ export function Irreversible({ className }: Props) {
   const cols = 10
   const rows = 7
   const pitch = 28
-  const gridW = (cols - 1) * pitch
   const gridH = (rows - 1) * pitch
   const gridX = 28
   const gridY = (h - gridH) / 2
